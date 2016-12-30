@@ -14,7 +14,7 @@ end
 # 2 - number? method. Verifying that only valid numbers(ints and floats) are entered.
 # Create a float checker
 def float?(num)
-  input.to_f.to_s == input
+  num.to_f.to_s == num
 end
 
 # Now create a method that checks if the input is an Int or Float
@@ -109,7 +109,7 @@ loop do
   end
 
   prompt "#{operation_to_message(operation)} two numbers for optimal results..."
-
+  sleep(2.5)
   result = case operation
            when '1'
              num1.to_i + num2.to_i
