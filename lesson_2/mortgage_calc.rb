@@ -18,20 +18,20 @@ def valid_name?(name)
   /[a-zA-Z]/ === name
 end
 
-def no_apr_pct(loan_amount, monthly_duration)
+def zero_apr_interest(loan_amount, monthly_duration)
   loan_amount.to_f / monthly_duration.to_f
 end
 
-def has_apr_pct(loan_amount, monthly_interest, monthly_duration)
+def apr_interest(loan_amount, monthly_interest, monthly_duration)
   loan_amount.to_f * (monthly_interest.to_f /
     (1 - (1 + monthly_interest.to_f)**-monthly_duration.to_f))
 end
 
 def calculate_payments(loan_amount, monthly_interest, monthly_duration)
   if monthly_interest.to_f.zero?
-    no_apr_pct(loan_amount, monthly_duration)
+    zero_apr_interest(loan_amount, monthly_duration)
   else
-    apr_pct(loan_amount, monthly_interest, monthly_duration)
+    has_apr_interest(loan_amount, monthly_interest, monthly_duration)
   end
 end
 
