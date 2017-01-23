@@ -76,11 +76,10 @@ loop do
 
   prompt "Your score: #{player_score}; Computer score: #{computer_score}"
 
-  if player_score == 5 || computer_score == 5
+  next unless player_score == 5 || computer_score == 5
     prompt "Want to play again? ('y' to continue)"
     answer = gets.chomp.downcase
     break unless answer.downcase.start_with? 'y'
-  end
 end
 
 prompt "Thanks for playing! Bye :)"
