@@ -9,8 +9,8 @@ def prompt(message)
   puts "=> #{message}"
 end
 
-def win?(player1, player2)
-  winning_choices = [player1, player2]
+def win?(winner, loser)
+  winning_choices = [winner, loser]
 
   WINNING_MATCH.include?(winning_choices)
 end

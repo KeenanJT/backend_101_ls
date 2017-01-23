@@ -4,10 +4,10 @@ def prompt(message)
   puts "=> #{message}"
 end
 
-def win?(player1, player2)
-  player1 == 'rock' && player2 == 'scissors' ||
-    player1 == 'scissors' && player2 == 'paper' ||
-    player1 == 'paper' && player2 == 'rock'
+def win?(winner, loser)
+  winner == 'rock' && loser == 'scissors' ||
+    winner == 'scissors' && loser == 'paper' ||
+    winner == 'paper' && loser == 'rock'
 end
 
 def display_results(player, computer)
@@ -21,10 +21,10 @@ def display_results(player, computer)
 end
 
 loop do
-  choice = ''
+  player_choice = ''
   loop do
     prompt "Choose one: #{VALID_CHOICES.join(', ')}"
-    choice = gets.chomp
+    player_choice = gets.chomp
 
     if VALID_CHOICES.include?(choice)
       break
@@ -35,9 +35,9 @@ loop do
 
   computer_choice = VALID_CHOICES.sample
 
-  prompt "You chose: #{choice}; Computer chose: #{computer_choice}"
+  prompt "You chose: #{player_choice}; Computer chose: #{computer_choice}"
 
-  display_results(choice, computer_choice)
+  display_results(player_choice, computer_choice)
 
   prompt 'Want to play again?'
   answer = gets.chomp
