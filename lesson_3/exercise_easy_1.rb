@@ -5,12 +5,12 @@ numbers.uniq
 
 puts numbers
 
-# ANSWER: => [1, 2, 3]. The uniq method takes out the multiples of an element, so it's only represented by one element. The two 2s became one 2.
+# ANSWER: 1 2 2 3 as uniq did not modify numbers variables.
 
 #################################################################################################### 
 
 # Question 2 - Describe the difference between ! and ? in Ruby. And explain what would happen in the following scenarios:
-  # ANSWER: '?' indicates that a method returns a bool, while '!' indicates that a method mutates the caller, basically it's destructive and will change the original object.
+  # ANSWER: '?' indicates that a method returns a bool, while '!' indicates that a method mutates the caller, but it's just part of the name, but neither ! or ? has any effect.
 
   # a) what is != and where should you use it?
     # ANSWER: '!=' Checks if the value of two operands are equal or not, if values are not equal then condition becomes true.
