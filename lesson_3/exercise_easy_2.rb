@@ -110,3 +110,4 @@ title = "Flintstone Family Members"
 
 # ANSWER:
 
+title.center(40)
